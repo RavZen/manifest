@@ -35,6 +35,10 @@
            fetch="https://github.com/ProtonAOSP"
            revision="refs/heads/sc-v2" />
 
+  <remote  name="raven"
+           fetch="https://github.com/RavZen"
+           revision="spark" />
+
   <!-- Remove unused hardware repos -->
   <remove-project name="device/amlogic/yukawa" />
   <remove-project name="device/amlogic/yukawa-kernel" />
@@ -144,7 +148,7 @@
   <remove-project name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" />
 
   <!-- Device repos -->
-  <project path="device/spark/sepolicy" name="device_spark_sepolicy" remote="spark" />
+  <project path="device/spark/sepolicy" name="device_spark_sepolicy" remote="raven" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="spark" />
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="spark" />
 
@@ -163,7 +167,7 @@
 
   <!-- Framework repos -->
   <project path="frameworks/av" name="frameworks_av" remote="spark" />
-  <project path="frameworks/base" name="frameworks_base" remote="spark" />
+  <project path="frameworks/base" name="frameworks_base" remote="raven" />
   <project path="frameworks/native" name="frameworks_native" remote="spark" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="spark" />
 
@@ -171,7 +175,7 @@
   <project path="art" name="art" remote="spark" />
   <project path="bionic" name="bionic" remote="spark" />
   <project path="bootable/recovery" name="bootable_recovery" remote="spark" />
-  <project path="build/make" name="build_make" remote="spark" >
+  <project path="build/make" name="build_make" remote="raven" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -274,11 +278,11 @@
 
   <!-- Packages repos -->
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="evo" />
-  <project path="packages/apps/Fireworks" name="packages_apps_Fireworks" remote="spark" />
+  <project path="packages/apps/Fireworks" name="packages_apps_Fireworks" remote="raven" />
   <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="spark" />
   <project path="packages/apps/GamingMode" name="packages_apps_GamingMode" remote="spark" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="spark" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="spark" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="raven" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="spark" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="spark" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="evo" />
@@ -303,9 +307,8 @@
   <!-- vendor repos -->
   <project path="vendor/gms" name="android_vendor_gms" remote="spark-gitlab" clone-depth="1" />
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="arrow" />
-  <project path="vendor/spark" name="platform_vendor_spark" remote="spark" />
+  <project path="vendor/spark" name="platform_vendor_spark" remote="raven" />
   <project path="vendor/support" name="platform_vendor_support" remote="spark" />
-  <project path="vendor/pixel-framework" name="PixelExperience/vendor_pixel-framework" remote="github" revision="twelve" />
   <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="vendor_qcom_opensource_bluetooth-commonsys-intf" remote="evo" />
   <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="vendor_qcom_opensource_bluetooth_ext" remote="evo" />
   <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="vendor_qcom_opensource_packages_apps_Bluetooth" remote="evo" />
