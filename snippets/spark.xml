@@ -39,6 +39,10 @@
            fetch="https://github.com/RavZen"
            revision="spark" />
 
+    <remote name="superior"
+          fetch="https://github.com/SuperiorOS/"
+          revision="refs/heads/twelvedotone" />
+
   <!-- Remove unused hardware repos -->
   <remove-project name="device/amlogic/yukawa" />
   <remove-project name="device/amlogic/yukawa-kernel" />
@@ -139,6 +143,9 @@
   <remove-project name="platform/system/update_engine" />
   <remove-project name="platform/system/vold" />
   <remove-project name="platform/packages/modules/DnsResolver" />
+
+  <remove-project name="platform/packages/apps/Dialer" />
+  <remove-project name="platform/packages/apps/ThemePicker" />
 
   <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
   <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
@@ -291,6 +298,9 @@
   <!-- Services repos -->
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="spark" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="spark" />
+
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="superior" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="superior" />
 
   <project path="packages/modules/DnsResolver" name="packages_modules_DnsResolver" remote="spark" />
 
