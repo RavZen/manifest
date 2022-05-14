@@ -39,6 +39,10 @@
            fetch="https://github.com/ProtonAOSP"
            revision="refs/heads/sc-v2" />
 
+  <remote  name="raven"
+           fetch="https://github.com/RavZen"
+           revision="revo" />
+
   <!-- Remove unused hardware repos -->
   <remove-project name="device/amlogic/yukawa" />
   <remove-project name="device/amlogic/yukawa-kernel" />
@@ -182,7 +186,7 @@
 
   <!-- Framework repos -->
   <project path="frameworks/av" name="frameworks_av" remote="evo" />
-  <project path="frameworks/base" name="frameworks_base" remote="evo" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="raven" />
   <project path="frameworks/libs/net" name="frameworks_libs_net" remote="evo" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="evo" />
   <project path="frameworks/native" name="frameworks_native" remote="evo" />
@@ -192,7 +196,7 @@
   <project path="art" name="art" remote="evo" />
   <project path="bionic" name="bionic" remote="evo" />
   <project path="bootable/recovery" name="bootable_recovery" remote="evo" />
-  <project path="build/make" name="build" remote="evo" >
+  <project path="build/make" name="android_build" remote="raven" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -279,7 +283,7 @@
   <!-- Packages repos -->
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="evo" />
   <project path="packages/apps/EvoEgg" name="packages_apps_EvoEgg" remote="evo" />
-  <project path="packages/apps/Evolver" name="packages_apps_Evolver" remote="evo" />
+  <project path="packages/apps/Evolver" name="android_packages_apps_Configurations" remote="raven" />
   <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="pe" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="evo" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="evo" />
@@ -308,7 +312,7 @@
   <!-- System repos -->
   <project path="system/apex" name="system_apex" remote="evo" />
   <project path="system/bt" name="system_bt" remote="evo" />
-  <project path="system/core" name="system_core" remote="evo" />
+  <project path="system/core" name="android_system_core" remote="raven" />
   <project path="system/libhwbinder" name="system_libhwbinder" remote="evo" />
   <project path="system/media" name="system_media" remote="evo" />
   <project path="system/security" name="system_security" remote="evo" />
@@ -319,7 +323,7 @@
 
   <!-- vendor repos -->
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="arrow" />
-  <project path="vendor/evolution" name="vendor_evolution" remote="evo" />
+  <project path="vendor/evolution" name="android_vendor_raven" remote="raven" />
   <project path="vendor/gms" name="vendor_gapps" groups="vendor" remote="evo-gitlab" clone-depth="1" />
   <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="evo" />
   <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="vendor_qcom_opensource_bluetooth-commonsys-intf" remote="evo" />
