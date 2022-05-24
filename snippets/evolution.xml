@@ -293,7 +293,7 @@
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="evo" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="proton" />
   <project path="packages/apps/Updates" name="packages_apps_Updates" remote="evo" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="raven" revision="test" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="raven" />
 
   <!-- Modules repos -->
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="evo" />
