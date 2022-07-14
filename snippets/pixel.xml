@@ -27,7 +27,16 @@
           fetch="https://gitlab.pixelexperience.org/android/vendor-blobs"
           revision="twelve" />
 
+  <remote name="pe-raven"
+          fetch="https://github.com/pe-raven"
+          revision="twelve-plus" />
+
+  <remote name="pe-raven-gitlab"
+          fetch="https://gitlab.com/bicet"
+          revision="twelve-plus" />
+
   <!-- External repos -->
+  <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" remote="pe-raven" />
   <project path="external/boringssl" name="external_boringssl" remote="pixel" />
   <project path="external/cldr" name="external_cldr" remote="pixel" />
   <project path="external/e2fsprogs" name="external_e2fsprogs" remote="pixel" />
@@ -35,17 +44,20 @@
   <project path="external/guice" name="external_guice" remote="pixel" />
   <project path="external/icu" name="external_icu" remote="pixel" />
   <project path="external/libcxx" name="external_libcxx" remote="pixel" />
+  <project path="external/libjpeg-turbo" name="external_libjpeg-turbo" remote="pe-raven" />
   <project path="external/mksh" name="external_mksh" remote="pixel" />
   <project path="external/perfetto" name="external_perfetto" remote="pixel" />
   <project path="external/selinux" name="external_selinux" remote="pixel" />
+  <project path="external/sqlite" name="external_sqlite" remote="pe-raven" />
   <project path="external/tinyalsa" name="external_tinyalsa" remote="pixel" />
   <project path="external/tinycompress" name="external_tinycompress" remote="pixel" />
   <project path="external/toybox" name="external_toybox" remote="pixel" />
   <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="pixel" />
+  <project path="external/zlib-ng" name="external_zlib-ng" remote="pe-raven" />
 
   <!-- Framework repos -->
   <project path="frameworks/av" name="frameworks_av" remote="pixel-plus" />
-  <project path="frameworks/base" name="frameworks_base" remote="pixel-plus" />
+  <project path="frameworks/base" name="frameworks_base" remote="pe-raven" />
   <project path="frameworks/native" name="frameworks_native" remote="pixel-plus" />
   <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="pixel" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="pixel" />
@@ -53,9 +65,9 @@
   <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" remote="pixel" />
 
   <!-- General repos -->
-  <project path="art" name="art" remote="pixel" />
-  <project path="bionic" name="bionic" remote="pixel" />
-  <project path="build/make" name="build" remote="pixel">
+  <project path="art" name="art" remote="pe-raven" />
+  <project path="bionic" name="bionic" remote="pe-raven" />
+  <project path="build/make" name="build" remote="pe-raven">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -112,7 +124,7 @@
   <project path="packages/apps/CarrierConfig" name="packages_apps_CarrierConfig" remote="pixel" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="pixel" />
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="pixel" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pixel-plus" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pe-raven" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" remote="pixel" />
   <project path="packages/apps/Traceur" name="packages_apps_Traceur" remote="pixel" />
   <project path="packages/modules/adb" name="packages_modules_adb" remote="pixel" />
@@ -159,5 +171,18 @@
 
   <!-- Tools Repos -->
   <project path="tools/metalava" name="tools_metalava" remote="pixel" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/PixelLauncher" name="vendor_PixelLauncher" remote="pe-raven" />
+
+  <!-- Raven Repos-->
+  <project path="device/google/gs101" name="device_google_gs101" remote="pe-raven" />
+  <project path="device/google/gs101-sepolicy" name="device_google_gs101-sepolicy" remote="pe-raven" />
+  <project path="device/google/raviole" name="device_google_raviole" remote="pe-raven" />
+  <project path="device/google/raviole-kernel" name="device_google_raviole-kernel" remote="pe-raven" />
+  <project path="kernel/google/raviole/raven" name="kernel_google_raviole_raven" remote="pe-raven" />
+  <project path="vendor/google/raven" name="pe_vendor_google_raven" remote="pe-raven-gitlab" />
+  <project path="vendor/google/interfaces" name="vendor_google_interfaces" remote="pe-raven" />
+  <project path="vendor/google/pixelparts" name="pe_vendor_google_pixelparts" remote="pe-raven-gitlab" />
 
 </manifest>
