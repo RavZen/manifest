@@ -14,11 +14,15 @@
   <remote name="gitlab"
           fetch="https://gitlab.com/" />
 
+    <remote  name="raven"
+           fetch="https://github.com/RavZen"
+           revision="statix" />
+
   <!-- Bootable -->
   <project path="bootable/recovery" name="android_bootable_recovery" remote="statix" />
 
   <!-- Build -->
-  <project path="build/make" name="android_build" remote="statix" groups="pdk" >
+  <project path="build/make" name="android_build" remote="raven" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -47,7 +51,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="android_frameworks_av" remote="statix" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="statix" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="raven" />
   <project path="frameworks/native" name="android_frameworks_native" remote="statix" />
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="statix" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="statix" />
@@ -69,11 +73,11 @@
   <project path="vendor/nxp/secure_element_extns" name="android_vendor_nxp_secure_element_extns" remote="statix" />
 
   <!-- NXP -->
-  <project path="manifest" name="android_manifest" remote="statix" />
+  <project path="manifest" name="android_manifest" remote="raven" />
 
   <!-- Packages -->
-  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="statix" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="statix" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="raven" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="raven" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="statix" />
   <project path="packages/apps/Statix/ColorStub" name="android_packages_apps_Statix_ColorStub" remote="statix" />
   <project path="packages/apps/Statix/Launcher" name="android_packages_apps_Statix_Launcher" remote="statix" />
@@ -105,7 +109,7 @@
   <project path="vendor/bromite" name="android_vendor_bromite" revision="main" remote="statix" />
   <project path="vendor/gms" name="StatiXOS/android_vendor_google_gms" revision="sc-v2" remote="gitlab" />
   <project path="vendor/rkicons" name="android_vendor_rkicons" remote="statix" />
-  <project path="vendor/statix" name="android_vendor_statix" remote="statix">
+  <project path="vendor/statix" name="android_vendor_raven" remote="raven">
     <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk" />
   </project>
   <project path="vendor/statix-prebuilts" name="android_vendor_statix-prebuilts" remote="statix" />
