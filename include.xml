@@ -78,7 +78,7 @@
   <project path="vendor/nxp/secure_element_extns" name="android_vendor_nxp_secure_element_extns" remote="statix" />
 
   <!-- NXP -->
-  <project path="manifest" name="android_manifest" remote="raven" />
+  <project path="manifest" name="manifest" remote="raven" />
 
   <!-- Packages -->
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="raven" />
